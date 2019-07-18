@@ -1,0 +1,33 @@
+<div>
+  <button (click)="addProfile()" class="btn btn-info">Add Profile</button>
+</div>
+
+<h2 class="text-center">All Profiles</h2>
+
+<div class="table-responsive table-container">
+  <table class="table table-light table-hover table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th>Logical ID</th>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let profile of profiles">
+        <td>{{ profile.logical_id }}</td>
+        <td>
+          <a [routerLink]="['/product/', profile.id]">{{ profile.name }}</a>
+        </td>
+        <td>
+          <button (click)="deleteProfile(profile)" class="btn btn-info">
+            Delete
+          </button>
+          <button (click)="updateProfile(profile)" style="margin-left: 20px;" class="btn btn-info">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,24 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Profile</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Logical ID:</label>
+      <input [(ngModel)]="profile.logical_id" type="text" formControlName="logical_id" placeholder="Logical ID" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.logical_id.errors }" />
+      <div *ngIf="submitted && f.logical_id.errors">
+        <div *ngIf="f.logical_id.errors.required">Logical ID is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Name:</label>
+      <input [(ngModel)]='profile.name' type="text" formControlName="name" placeholder="Name" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+      <div *ngIf="submitted && f.name.errors">
+        <div *ngIf="f.name.errors.required">Name is required</div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-info btn-custom">Save</button>
+    <button routerLink="/profile" type="button" class="btn btn-info">Back</button>
+  </form>
+</div>

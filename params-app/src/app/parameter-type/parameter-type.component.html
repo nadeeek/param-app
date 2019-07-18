@@ -1,0 +1,42 @@
+<div>
+  <button (click)="addParameterType()" class="btn btn-info">
+    Add Parameter Type
+  </button>
+</div>
+
+<h2 class="text-center">All Parameter Type</h2>
+
+<div class="table-responsive table-container">
+  <table class="table table-light table-hover table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th>Name</th>
+        <th>Converter</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let paramType of paramTypes">
+        <td>
+          <a [routerLink]="['/add-param-type/', paramType.id]">{{
+            paramType.name
+          }}</a>
+        </td>
+        <td>{{ paramType.converter }}</td>
+
+        <td>
+          <button (click)="deleteParameterType(paramType)" class="btn btn-info">
+            Delete
+          </button>
+          <button
+            (click)="updateParameterType(paramType)"
+            style="margin-left: 20px;"
+            class="btn btn-info"
+          >
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,39 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Parameter Type</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Name:</label>
+      <input
+        [(ngModel)]="parameterType.name"
+        type="text"
+        formControlName="name"
+        placeholder="Name"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.name.errors }"
+      />
+      <div *ngIf="submitted && f.name.errors">
+        <div *ngIf="f.name.errors.required">Name is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Converter:</label>
+      <input
+        [(ngModel)]="parameterType.converter"
+        type="text"
+        formControlName="converter"
+        placeholder="Converter"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.converter.errors }"
+      />
+      <div *ngIf="submitted && f.converter.errors">
+        <div *ngIf="f.converter.errors.required">Converter is required</div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-info btn-custom">Save</button>
+    <button routerLink="/param/type" type="button" class="btn btn-info">
+      Back
+    </button>
+  </form>
+</div>
