@@ -1,0 +1,120 @@
+{
+  "parameter_type": [
+    {
+      "id": 1,
+      "name": "Cellius",
+      "converter": "C"
+    },
+    {
+      "id": 2,
+      "name": "pH",
+      "converter": "pH"
+    },
+    {
+      "id": 3,
+      "name": "Centemeter",
+      "converter": "cm"
+    },
+    {
+      "id": 4,
+      "name": "Kilometers per hour",
+      "converter": "Km/h"
+    },
+    {
+      "name": "Test Parameter Type",
+      "converter": "test",
+      "id": 5
+    }
+  ],
+  "parameter": [
+    {
+      "id": 1,
+      "name": "Temprature",
+      "profile": "thermometer",
+      "param_type": "cellius"
+    },
+    {
+      "_id": null,
+      "name": "pH value",
+      "profile": "speedometer",
+      "param_type": "Cellius",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Length",
+      "profile": "ruler",
+      "param_type": "centemeter"
+    },
+    {
+      "id": 4,
+      "name": "Speed",
+      "profile": "speedometer",
+      "param_type": "Kilometers per hour"
+    },
+    {
+      "_id": null,
+      "name": "Testing",
+      "profile": "thermometer",
+      "param_type": "Cellius",
+      "id": 5
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "logical_id": 1,
+      "name": "thermometer"
+    },
+    {
+      "id": 2,
+      "logical_id": 2,
+      "name": "pH meter"
+    },
+    {
+      "id": 3,
+      "logical_id": 3,
+      "name": "ruler"
+    },
+    {
+      "id": 4,
+      "logical_id": 4,
+      "name": "speedometer"
+    },
+    {
+      "name": "Test",
+      "logical_id": "5",
+      "id": 5
+    }
+  ],
+  "measurement": [
+    {
+      "id": 1,
+      "value": 25,
+      "parameter": "Temprature",
+      "profile": "thermometer",
+      "param_type": "Cellius"
+    },
+    {
+      "id": 2,
+      "value": 5.5,
+      "parameter": "pH value",
+      "profile": "pH meter",
+      "param_type": "pH value"
+    },
+    {
+      "id": 3,
+      "value": 125,
+      "parameter": "Length",
+      "profile": "ruler",
+      "param_type": "centemeter"
+    },
+    {
+      "id": 4,
+      "value": 65,
+      "parameter": "Speed",
+      "profile": "speedometer",
+      "param_type": "Kilometers per hour"
+    }
+  ]
+}
