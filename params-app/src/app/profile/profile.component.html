@@ -17,7 +17,7 @@
       <tr *ngFor="let profile of profiles">
         <td>{{ profile.logical_id }}</td>
         <td>
-          <a [routerLink]="['/product/', profile.id]">{{ profile.name }}</a>
+          <a class="profile-name" [routerLink]="['/product/', profile.id]">{{ profile.name }}</a>
         </td>
         <td>
           <button (click)="deleteProfile(profile)" class="btn btn-info">

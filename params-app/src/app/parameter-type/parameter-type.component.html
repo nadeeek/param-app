@@ -18,21 +18,17 @@
     <tbody>
       <tr *ngFor="let paramType of paramTypes">
         <td>
-          <a [routerLink]="['/add-param-type/', paramType.id]">{{
+          <a class="parameter-type-name" [routerLink]="['/add-param-type/', paramType.id]">{{
             paramType.name
-          }}</a>
+            }}</a>
         </td>
-        <td>{{ paramType.converter }}</td>
+        <td class="parameter-type-converter">{{ paramType.converter }}</td>
 
         <td>
           <button (click)="deleteParameterType(paramType)" class="btn btn-info">
             Delete
           </button>
-          <button
-            (click)="updateParameterType(paramType)"
-            style="margin-left: 20px;"
-            class="btn btn-info"
-          >
+          <button (click)="updateParameterType(paramType)" style="margin-left: 20px;" class="btn btn-info">
             Edit
           </button>
         </td>

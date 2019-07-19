@@ -1,5 +1,5 @@
 <div>
-  <button (click)="addParameter()" class="btn btn-info">Add Parameter</button>
+  <button (click)="addParameter()" class="btn btn-info btn-add-parameter">Add Parameter</button>
 </div>
 
 <h2 class="text-center">All Parameters</h2>
@@ -16,21 +16,17 @@
     </thead>
     <tbody>
       <tr *ngFor="let parameter of parameters">
-        <td>
+        <td class="parameter-name">
           <a [routerLink]="['/product/', parameter.id]">{{ parameter.name }}</a>
         </td>
-        <td>{{ parameter.profile }}</td>
-        <td>{{ parameter.param_type }}</td>
+        <td class="parameter-profile">{{ parameter.profile }}</td>
+        <td class="param-type">{{ parameter.param_type }}</td>
 
         <td>
-          <button (click)="deleteParameter(parameter)" class="btn btn-info">
+          <button (click)="deleteParameter(parameter)" class="btn btn-info btn-delete">
             Delete
           </button>
-          <button
-            (click)="updateParameter(parameter)"
-            style="margin-left: 20px;"
-            class="btn btn-info"
-          >
+          <button (click)="updateParameter(parameter)" style="margin-left: 20px;" class="btn btn-info btn-edit">
             Edit
           </button>
         </td>

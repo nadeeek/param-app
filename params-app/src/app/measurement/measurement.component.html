@@ -8,14 +8,14 @@
     <label>Profile:</label>
     <select #profile (change)='onProfileChange(profile.value)' class="form-control">
       <option [value]="0">Select Profile</option>
-      <option *ngFor='let profile of profiles' [value]="profile.name">{{profile.name}}</option>
+      <option class="profile-name" *ngFor='let profile of profiles' [value]="profile.name">{{profile.name}}</option>
     </select>
   </p>
   <p class="col-md-4">
     <label>Parameter:</label>
     <select #parameter (change)='onParameterChange(parameter.value)' class="form-control">
       <option [value]="0">Select Parameter</option>
-      <option *ngFor='let parameter of parameters' [value]="parameter.name">{{parameter.name}}</option>
+      <option class="parameter-name" *ngFor='let parameter of parameters' [value]="parameter.name">{{parameter.name}}</option>
     </select>
   </p>
 </div>
